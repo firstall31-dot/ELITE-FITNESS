@@ -1,10 +1,10 @@
 import {
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin
-} from "./chunk-NJGT5AFO.js";
+} from "./chunk-R2SJYWNZ.js";
 import {
   DOCUMENT
-} from "./chunk-2WDSK4Z4.js";
+} from "./chunk-CBA5JFES.js";
 import {
   Injectable,
   InjectionToken,
@@ -15,9 +15,9 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵgetInheritedFactory
-} from "./chunk-PR7BJRWE.js";
+} from "./chunk-7T3KKZAY.js";
 
-// node_modules/@taiga-ui/event-plugins/fesm2022/taiga-ui-event-plugins.mjs
+// node_modules/.pnpm/@taiga-ui+event-plugins@5.0_ab7960f69e2c942d381875f600295947/node_modules/@taiga-ui/event-plugins/fesm2022/taiga-ui-event-plugins.mjs
 var LongtapEvent = class extends CustomEvent {
   constructor(type, _a) {
     var _b = _a, {

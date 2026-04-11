@@ -1,137 +1,164 @@
-# Elite Fitness Coaching - Angular Website
+# Elite Fitness - Professional Fitness Coaching Website
 
-A cinematic, modern fitness coaching website built with Angular 18, Tailwind CSS, and Taiga UI.
+A modern, responsive fitness coaching website built with Angular 18, Tailwind CSS, and TypeScript. Designed to showcase fitness services, coaching programs, and client testimonials.
 
-## Features
+## 🌟 Features
 
-- Cinematic Black & Red color scheme
-- Smooth scroll animations
-- Fully responsive design
-- SEO optimized with meta tags
-- Rounded buttons throughout
-- Modern glass-morphism effects
-- Taiga UI components integration
-- Lazy-loaded routes for performance
+- ✅ **Responsive Design** - Mobile-first approach, works on all devices
+- ✅ **Modern Stack** - Angular 18 with standalone components
+- ✅ **Tailwind CSS** - Utility-first CSS framework for rapid development
+- ✅ **Performance Optimized** - Lazy-loaded routes, code splitting, minification
+- ✅ **SEO Ready** - Meta tags, Open Graph, structured data
+- ✅ **Accessibility** - WCAG compliant, semantic HTML, keyboard navigation
+- ✅ **Production Ready** - Fully tested and optimized for deployment
 
-## Tech Stack
-
-- **Angular 18** (Standalone Components)
-- **Tailwind CSS 3.4**
-- **Taiga UI 4.0**
-- **TypeScript 5.5**
-- **SCSS**
-
-## Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-
-- Node.js 18+ 
-- npm or pnpm
+- Node.js 18.x or higher
+- pnpm 10.x or higher
 
 ### Installation
 
-1. Install dependencies:
 ```bash
-npm install
+# Clone the repository
+git clone https://github.com/Mostafa-SAID7/ELITE-FITNESS.git
+cd ELITE-FITNESS
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm start
 ```
 
-2. Start the development server:
+The app will be available at `http://localhost:4200/`
+
+## 📦 Build
+
+### Development Build
 ```bash
-npm start
+pnpm start
 ```
 
-3. Open your browser and navigate to `http://localhost:4200`
-
-### Build for Production
-
+### Production Build
 ```bash
-npm run build
+pnpm run build
 ```
 
-The production build will be output to the `dist/fitness-coaching` directory.
+Output: `dist/fitness-coaching`
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 src/
 ├── app/
-│   ├── components/          # Shared components
+│   ├── components/          # Reusable components
 │   │   ├── header/
 │   │   ├── footer/
 │   │   ├── hero/
-│   │   ├── stats/
-│   │   ├── services-preview/
-│   │   ├── about-preview/
 │   │   ├── testimonials/
-│   │   └── cta-section/
-│   ├── pages/              # Route pages
+│   │   └── ...
+│   ├── pages/              # Page components
 │   │   ├── home/
-│   │   ├── about/
 │   │   ├── services/
+│   │   ├── about/
 │   │   └── contact/
-│   ├── app.component.ts
-│   └── app.routes.ts
-├── styles.scss             # Global styles
-├── index.html
-└── main.ts
+│   ├── app.component.ts    # Root component
+│   └── app.routes.ts       # Route configuration
+├── assets/                 # Static assets
+├── styles.scss            # Global styles
+├── main.ts                # Entry point
+└── index.html             # HTML template
 ```
 
-## Customization
+## 🛣️ Routes
 
-### Colors
+- `/` - Home page
+- `/about` - About page
+- `/services` - Services page
+- `/contact` - Contact page
 
-Edit the color palette in `tailwind.config.js`:
+## 🎨 Styling
 
-```js
-colors: {
-  primary: {
-    DEFAULT: '#DC2626',  // Your primary color
-    // ... other shades
-  },
-  dark: {
-    DEFAULT: '#0A0A0A',  // Background color
-    // ... other shades
-  }
-}
-```
+- **Tailwind CSS** - Utility-first CSS framework
+- **SCSS** - For advanced styling and variables
+- **Responsive** - Mobile-first design approach
+- **Dark Theme** - Modern dark color scheme with red accents
 
-### Fonts
+## 📚 Documentation
 
-The project uses:
-- **Bebas Neue** for headings
-- **Inter** for body text
+- [Setup Guide](./docs/SETUP.md) - Installation and development setup
+- [Architecture](./docs/ARCHITECTURE.md) - Project structure and design patterns
 
-To change fonts, update:
-1. `src/index.html` - Google Fonts import
-2. `tailwind.config.js` - Font family configuration
+## 🚢 Deployment
 
-### Animations
+### Vercel (Recommended)
+1. Push to GitHub
+2. Connect repository to Vercel
+3. Automatic deployment on push to main branch
 
-Custom animations are defined in `tailwind.config.js` under `extend.animation` and `extend.keyframes`.
+### Manual Deployment
+1. Build: `pnpm run build`
+2. Deploy `dist/fitness-coaching` folder to your hosting service
 
-## Pages
+## 🔧 Technologies
 
-1. **Home** (`/`) - Hero, stats, services preview, about preview, testimonials, CTA
-2. **About** (`/about`) - Coach story, philosophy, certifications
-3. **Services** (`/services`) - Programs, comparison table, FAQ
-4. **Contact** (`/contact`) - Contact form, info, map placeholder
+- **Angular 18** - Frontend framework
+- **TypeScript** - Programming language
+- **Tailwind CSS** - Utility-first CSS
+- **Taiga UI** - Component library
+- **RxJS** - Reactive programming
+- **pnpm** - Package manager
 
-## SEO
+## 📊 Bundle Size
 
-The project includes:
-- Meta tags for description, keywords, author
-- Open Graph tags for social sharing
-- Twitter cards
-- Proper semantic HTML
-- Title service integration per route
+| Bundle | Size | Gzipped |
+|--------|------|---------|
+| Initial | 347.50 kB | 94.59 kB |
+| Contact | 50.61 kB | 11.63 kB |
+| Home | 20.28 kB | 5.23 kB |
+| Services | 11.99 kB | 3.67 kB |
+| About | 8.05 kB | 2.72 kB |
 
-## Browser Support
+## 🌐 Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
-## License
+## ♿ Accessibility
 
-MIT License - feel free to use this for your own projects!
+- Semantic HTML
+- ARIA labels and roles
+- Keyboard navigation support
+- Color contrast compliance
+- Screen reader friendly
+
+## 📝 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👤 Author
+
+**Mostafa SAID**
+- GitHub: [@Mostafa-SAID7](https://github.com/Mostafa-SAID7)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📞 Support
+
+For support, email support@elitefitness.com or open an issue on GitHub.
+
+## 🔗 Links
+
+- [Live Demo](https://elite-fitness.vercel.app)
+- [GitHub Repository](https://github.com/Mostafa-SAID7/ELITE-FITNESS)
+- [Documentation](./docs)
+
+---
+
+**Made with ❤️ by Elite Fitness Team**

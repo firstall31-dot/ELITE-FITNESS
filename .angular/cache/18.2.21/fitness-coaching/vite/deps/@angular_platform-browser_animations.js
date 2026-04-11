@@ -1,10 +1,10 @@
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-NJGT5AFO.js";
+} from "./chunk-R2SJYWNZ.js";
 import {
   DOCUMENT
-} from "./chunk-2WDSK4Z4.js";
+} from "./chunk-CBA5JFES.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -23,9 +23,9 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-PR7BJRWE.js";
+} from "./chunk-7T3KKZAY.js";
 
-// node_modules/@angular/animations/fesm2022/animations.mjs
+// node_modules/.pnpm/@angular+animations@18.2.14_6f6dae44cf173ce7bec3f2884fc94ef8/node_modules/@angular/animations/fesm2022/animations.mjs
 var AnimationMetadataType;
 (function(AnimationMetadataType2) {
   AnimationMetadataType2[AnimationMetadataType2["State"] = 0] = "State";
@@ -443,7 +443,7 @@ var AnimationGroupPlayer = class {
 };
 var ɵPRE_STYLE = "!";
 
-// node_modules/@angular/animations/fesm2022/browser.mjs
+// node_modules/.pnpm/@angular+animations@18.2.14_6f6dae44cf173ce7bec3f2884fc94ef8/node_modules/@angular/animations/fesm2022/browser.mjs
 var LINE_START = "\n - ";
 function invalidTimingValue(exp) {
   return new RuntimeError(3e3, ngDevMode && `The provided timing value "${exp}" is invalid.`);
@@ -4363,7 +4363,7 @@ var AnimationRendererFactory = class {
   }
 };
 
-// node_modules/@angular/platform-browser/fesm2022/animations.mjs
+// node_modules/.pnpm/@angular+platform-browser@1_5d65e731ce4b78582539271c61dc72c5/node_modules/@angular/platform-browser/fesm2022/animations.mjs
 var InjectableAnimationEngine = class _InjectableAnimationEngine extends AnimationEngine {
   // The `ApplicationRef` is injected here explicitly to force the dependency ordering.
   // Since the `ApplicationRef` should be created earlier before the `AnimationEngine`, they
