@@ -1,18 +1,18 @@
 # Deployment Guide
 
-## Vercel Deployment
+## Netlify Deployment
 
 ### Prerequisites
 
-- Vercel account (https://vercel.com)
-- GitHub repository connected to Vercel
+- Netlify account (https://netlify.com)
+- GitHub repository connected to Netlify
 
 ### Automatic Deployment
 
-The application is configured for automatic deployment on Vercel using GitHub integration:
+The application is configured for automatic deployment on Netlify using GitHub integration:
 
 1. Push changes to the `main` branch
-2. Vercel automatically detects the push
+2. Netlify automatically detects the push
 3. Build process starts automatically
 4. Application is deployed to production
 
@@ -21,58 +21,64 @@ The application is configured for automatic deployment on Vercel using GitHub in
 If you need to manually deploy:
 
 ```bash
-# Install Vercel CLI
-npm install -g vercel
+# Install Netlify CLI
+npm install -g netlify-cli
 
 # Deploy from project directory
-vercel
+netlify deploy --prod
 ```
 
 ### Configuration
 
-Vercel configuration is defined in `vercel.json`:
+Netlify configuration is defined in `netlify.toml`:
 
-```json
-{
-  "buildCommand": "pnpm run build",
-  "outputDirectory": "dist/fitness-coaching",
-  "installCommand": "pnpm install",
-  "framework": "angular"
-}
+```toml
+[build]
+  publish = "dist/fitness-coaching/browser"
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 ```
 
 ### Environment Variables
 
 If you need environment variables:
 
-1. Go to Vercel project settings
+1. Go to Netlify site settings
 2. Navigate to "Environment Variables"
 3. Add your variables
 4. Redeploy the project
 
 ### Troubleshooting
 
-#### Build Fails with Peer Dependency Errors
+#### Build Fails with Dependency Errors
 
-The build uses `pnpm install` which respects the lock file. If you get peer dependency errors:
+The build uses `npm install` which respects the lock file. If you get dependency errors:
 
-1. Ensure `pnpm-lock.yaml` is up to date
-2. Run locally: `pnpm install --legacy-peer-deps`
+1. Ensure `package-lock.json` is up to date
+2. Run locally: `npm install`
 3. Commit the updated lock file
 
-#### Build Fails with "Base directory does not exist"
+#### Build Fails with "Command not found"
 
-This error occurs when Vercel's project settings point to the wrong directory:
+This error occurs when Netlify can't find the build command:
 
-1. Go to Vercel project settings
-2. Check "Root Directory" setting
-3. Ensure it's set to the correct path (should be empty for root or `v0-angular-tailwind-site` if in subdirectory)
-4. Save and redeploy
+1. Go to Netlify site settings
+2. Check "Build & Deploy" settings
+3. Ensure build command is set to `npm run build`
+4. Ensure publish directory is set to `dist/fitness-coaching/browser`
+5. Save and redeploy
 
 #### Deployment URL
 
 After successful deployment, your application will be available at:
-- Production: `https://elite-fitness-drab.vercel.app`
+- Production: `https://elite-fitness73.netlify.app`
 - Preview: Generated for each pull request
 
 ## Docker Deployment
@@ -126,15 +132,15 @@ Before deploying to production:
 
 If you need to rollback to a previous version:
 
-1. Go to Vercel project dashboard
-2. Navigate to "Deployments"
+1. Go to Netlify site dashboard
+2. Navigate to "Deploys"
 3. Find the previous successful deployment
-4. Click "Promote to Production"
+4. Click "Publish deploy"
 
 ## Monitoring
 
 Monitor your deployment:
 
-1. Vercel Analytics: https://vercel.com/dashboard
-2. Application Logs: Available in Vercel project settings
-3. Error Tracking: Configure in Vercel settings
+1. Netlify Analytics: https://app.netlify.com/sites/elite-fitness73/analytics
+2. Application Logs: Available in Netlify site settings
+3. Error Tracking: Configure in Netlify settings

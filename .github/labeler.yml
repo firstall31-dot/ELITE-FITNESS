@@ -34,7 +34,7 @@ config:
           - 'tsconfig*.json'
           - 'tailwind.config.js'
           - 'postcss.config.js'
-          - 'vercel.json'
+          - 'netlify.toml'
           - 'Dockerfile'
           - 'docker-compose.yml'
 

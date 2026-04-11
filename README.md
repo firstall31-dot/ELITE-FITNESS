@@ -16,7 +16,7 @@ A modern, responsive fitness coaching website built with Angular 18, Tailwind CS
 
 ### Prerequisites
 - Node.js 18.x or higher
-- pnpm 10.x or higher
+- npm 9.x or higher
 
 ### Installation
 
@@ -26,30 +26,30 @@ git clone https://github.com/Mostafa-SAID7/ELITE-FITNESS.git
 cd ELITE-FITNESS
 
 # Install dependencies
-pnpm install
+npm install
 
 # Start development server
-pnpm start
+npm start
 ```
 
 The app will be available at `http://localhost:4200/`
 
 ## 🌐 Live Demo
 
-**[View Live Application](https://elite-fitness-drab.vercel.app)**
+**[View Live Application](https://elite-fitness73.netlify.app)**
 
-Deployed on Vercel with automatic CI/CD from GitHub
+Deployed on Netlify with automatic CI/CD from GitHub
 
 ## 📦 Build
 
 ### Development Build
 ```bash
-pnpm start
+npm start
 ```
 
 ### Production Build
 ```bash
-pnpm run build
+npm run build
 ```
 
 Output: `dist/fitness-coaching`
@@ -96,24 +96,24 @@ src/
 
 - [Setup Guide](./docs/SETUP.md) - Installation and development setup
 - [Architecture](./docs/ARCHITECTURE.md) - Project structure and design patterns
-- [Deployment Guide](./docs/DEPLOYMENT.md) - Vercel deployment and CI/CD setup
+- [Deployment Guide](./docs/DEPLOYMENT.md) - Netlify deployment and CI/CD setup
 
 ## 🚢 Deployment
 
-### Automatic Deployment to Vercel
+### Automatic Deployment to Netlify
 
-The app is automatically deployed to Vercel on every push to the main branch using Vercel's native GitHub integration.
+The app is automatically deployed to Netlify on every push to the main branch using Netlify's native GitHub integration.
 
-**Live App:** https://elite-fitness-drab.vercel.app
+**Live App:** https://elite-fitness73.netlify.app
 
 ### Manual Deployment
 
 ```bash
-# Install Vercel CLI
-npm install -g vercel
+# Install Netlify CLI
+npm install -g netlify-cli
 
 # Deploy to production
-vercel --prod
+netlify deploy --prod
 ```
 
 For detailed deployment instructions, see [Deployment Guide](./docs/DEPLOYMENT.md)
@@ -123,9 +123,8 @@ For detailed deployment instructions, see [Deployment Guide](./docs/DEPLOYMENT.m
 - **Angular 18** - Frontend framework
 - **TypeScript** - Programming language
 - **Tailwind CSS** - Utility-first CSS
-- **Taiga UI** - Component library
 - **RxJS** - Reactive programming
-- **pnpm** - Package manager
+- **npm** - Package manager
 
 ## 📊 Bundle Size
 
@@ -171,10 +170,10 @@ For support, email support@elitefitness.com or open an issue on GitHub.
 
 ## 🔗 Links
 
-- [Live Demo](https://elite-fitness-drab.vercel.app)
+- [Live Demo](https://elite-fitness73.netlify.app)
 - [GitHub Repository](https://github.com/Mostafa-SAID7/ELITE-FITNESS)
 - [Documentation](./docs)
-- [Vercel Project](https://vercel.com/mostafa-said7/elite-fitness)
+- [Netlify Project](https://app.netlify.com/sites/elite-fitness73)
 
 ---
 

@@ -106,11 +106,11 @@ Currently using Angular services with RxJS for state management. No external sta
 
 ## Deployment
 
-The application is configured for deployment on Vercel with the following setup:
+The application is configured for deployment on Netlify with the following setup:
 
-- **Build Command**: `pnpm run build`
-- **Output Directory**: `dist/fitness-coaching`
-- **Install Command**: `pnpm install`
+- **Build Command**: `npm run build`
+- **Output Directory**: `dist/fitness-coaching/browser`
+- **Install Command**: `npm install`
 - **Framework**: Angular
 
 See `docs/DEPLOYMENT.md` for detailed deployment instructions.
