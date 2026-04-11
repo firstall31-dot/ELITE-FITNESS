@@ -8,8 +8,8 @@ import { FooterComponent } from './components/footer/footer.component';
   standalone: true,
   imports: [RouterOutlet, FooterComponent],
   template: `
-    <div class="min-h-screen bg-dark flex flex-col">
-      <header class="fixed top-0 left-0 right-0 z-50 bg-dark/95 border-b border-white/10">
+    <div class="min-h-screen bg-black flex flex-col">
+      <header class="fixed top-0 left-0 right-0 z-50 bg-black/95 border-b border-white/10">
         <nav class="container-max mx-auto px-4 h-20 flex items-center justify-between">
           <a routerLink="/" class="font-display text-2xl text-white">ELITE FITNESS</a>
           <div class="hidden lg:flex gap-8">

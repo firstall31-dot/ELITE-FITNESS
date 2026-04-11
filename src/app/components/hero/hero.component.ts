@@ -1,21 +1,22 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { heroData } from '../../data/hero.data';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
         <div 
           class="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')"
+          [style.background-image]="'url(' + heroData.backgroundImage + ')'"
         ></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/70 to-dark"></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-dark via-transparent to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent"></div>
         <!-- Red accent gradient -->
         <div class="absolute bottom-0 right-0 w-1/2 h-1/2 bg-gradient-to-tl from-primary-600/20 to-transparent"></div>
       </div>
@@ -41,36 +42,35 @@ import { RouterLink } from '@angular/router';
                       border border-primary-600/30 mb-8">
             <span class="w-2 h-2 rounded-full bg-primary-500 animate-pulse"></span>
             <span class="text-primary-400 text-sm font-medium tracking-wider uppercase">
-              Transform Your Life Today
+              {{ heroData.badge }}
             </span>
           </div>
 
           <!-- Main Heading -->
           <h1 class="animate-slide-up font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl 
                      leading-none tracking-tight mb-6">
-            <span class="text-white">UNLEASH</span>
+            <span class="text-white">{{ heroData.heading.line1 }}</span>
             <br>
-            <span class="text-gradient">YOUR POTENTIAL</span>
+            <span class="text-gradient">{{ heroData.heading.line2 }}</span>
           </h1>
 
           <!-- Subheading -->
           <p class="animate-slide-up text-white/70 text-lg sm:text-xl md:text-2xl max-w-2xl mb-10 leading-relaxed"
              style="animation-delay: 0.2s">
-            Elite fitness coaching designed to push your limits, build unstoppable strength, 
-            and transform your body into a powerful machine.
+            {{ heroData.subheading }}
           </p>
 
           <!-- CTA Buttons -->
           <div class="animate-slide-up flex flex-wrap gap-4" style="animation-delay: 0.4s">
-            <a routerLink="/contact" class="btn-primary group flex items-center gap-2">
-              <span>Start Your Journey</span>
+            <a [routerLink]="heroData.cta.primary.path" class="btn-primary group flex items-center gap-2">
+              <span>{{ heroData.cta.primary.label }}</span>
               <svg class="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
-            <a routerLink="/services" class="btn-secondary">
-              View Programs
+            <a [routerLink]="heroData.cta.secondary.path" class="btn-secondary">
+              {{ heroData.cta.secondary.label }}
             </a>
           </div>
 
@@ -78,15 +78,14 @@ import { RouterLink } from '@angular/router';
           <div class="animate-slide-up mt-16 flex flex-wrap items-center gap-8" style="animation-delay: 0.6s">
             <div class="flex items-center gap-3">
               <div class="flex -space-x-3">
-                @for (avatar of avatars; track avatar) {
-                  <div class="w-10 h-10 rounded-full border-2 border-dark bg-dark-50 overflow-hidden">
+                @for (avatar of heroData.avatars; track avatar) {
+                  <div class="w-10 h-10 rounded-full border-2 border-black bg-dark-50 overflow-hidden">
                     <img [src]="avatar" alt="Client" class="w-full h-full object-cover">
                   </div>
                 }
               </div>
               <div class="text-sm">
-                <div class="text-white font-semibold">500+ Athletes</div>
-                <div class="text-white/50">Transformed</div>
+                <div class="text-white font-semibold">{{ heroData.stats.athletes }} {{ heroData.stats.athletesLabel }}</div>
               </div>
             </div>
             <div class="h-10 w-px bg-white/20 hidden sm:block"></div>
@@ -99,8 +98,8 @@ import { RouterLink } from '@angular/router';
                 }
               </div>
               <div class="text-sm">
-                <span class="text-white font-semibold">4.9</span>
-                <span class="text-white/50"> Rating</span>
+                <span class="text-white font-semibold">{{ heroData.stats.rating }}</span>
+                <span class="text-white/50"> {{ heroData.stats.ratingLabel }}</span>
               </div>
             </div>
           </div>
@@ -122,6 +121,7 @@ import { RouterLink } from '@angular/router';
   `]
 })
 export class HeroComponent {
+  heroData = heroData;
   particles = Array.from({ length: 20 }, (_, i) => ({
     id: i,
     x: Math.random() * 100,
@@ -129,10 +129,4 @@ export class HeroComponent {
     delay: Math.random() * 5,
     duration: 5 + Math.random() * 5
   }));
-
-  avatars = [
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
-    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop',
-  ];
 }
