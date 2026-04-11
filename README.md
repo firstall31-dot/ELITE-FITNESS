@@ -34,6 +34,12 @@ pnpm start
 
 The app will be available at `http://localhost:4200/`
 
+## 🌐 Live Demo
+
+**[View Live Application](https://elite-fitness-drab.vercel.app)**
+
+Deployed on Vercel with automatic CI/CD from GitHub
+
 ## 📦 Build
 
 ### Development Build
@@ -90,6 +96,7 @@ src/
 
 - [Setup Guide](./docs/SETUP.md) - Installation and development setup
 - [Architecture](./docs/ARCHITECTURE.md) - Project structure and design patterns
+- [Deployment Guide](./docs/DEPLOYMENT.md) - Vercel deployment and CI/CD setup
 
 ## 🚢 Deployment
 
@@ -155,9 +162,10 @@ For support, email support@elitefitness.com or open an issue on GitHub.
 
 ## 🔗 Links
 
-- [Live Demo](https://elite-fitness.vercel.app)
+- [Live Demo](https://elite-fitness-drab.vercel.app)
 - [GitHub Repository](https://github.com/Mostafa-SAID7/ELITE-FITNESS)
 - [Documentation](./docs)
+- [Vercel Project](https://vercel.com/mostafa-said7/elite-fitness)
 
 ---
 
