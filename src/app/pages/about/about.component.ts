@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { aboutPageData } from '../../data/about-page.data';
 
 @Component({
   selector: 'app-about',
@@ -175,32 +176,7 @@ import { RouterLink } from '@angular/router';
   `]
 })
 export class AboutComponent {
-  pillars = [
-    {
-      number: '01',
-      title: 'CONSISTENCY',
-      description: 'Results come from showing up every single day, not from occasional bursts of motivation. I teach you to build habits that last a lifetime.'
-    },
-    {
-      number: '02',
-      title: 'SCIENCE-BACKED',
-      description: 'Every program I create is rooted in proven scientific principles. No fads, no gimmicks—just what actually works.'
-    },
-    {
-      number: '03',
-      title: 'INDIVIDUALIZED',
-      description: 'Your body, your goals, your lifestyle. Every program is tailored specifically to you because one size never fits all.'
-    }
-  ];
-
-  certifications = [
-    { name: 'NASM-CPT', org: 'National Academy of Sports Medicine' },
-    { name: 'Precision Nutrition L2', org: 'Precision Nutrition' },
-    { name: 'CSCS', org: 'NSCA' },
-    { name: 'Sports Psychology', org: 'ISSA' },
-    { name: 'Corrective Exercise', org: 'NASM-CES' },
-    { name: 'Performance Enhancement', org: 'NASM-PES' },
-    { name: 'Nutrition Coach', org: 'ISSA' },
-    { name: 'Kettlebell Specialist', org: 'ACE' }
-  ];
+  pageData = aboutPageData;
+  pillars = aboutPageData.philosophy.pillars;
+  certifications = aboutPageData.certifications.items;
 }
