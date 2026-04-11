@@ -14,3 +14,9 @@ next.user-config.*
 node_modules
 .next/
 .DS_Store
+
+# Old project folders
+v0-angular-tailwind-site/
+elite-fitness/
+.angular/
+dist/
