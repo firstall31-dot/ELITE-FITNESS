@@ -28,12 +28,11 @@ import { contactPageData } from '../../data/contact-page.data';
                 Contact Us
               </span>
               <h1 class="font-display text-5xl sm:text-6xl md:text-7xl mb-6">
-                LET'S START YOUR 
-                <span class="text-gradient">TRANSFORMATION</span>
+                OUR PACKAGES ARE JUST
+                <span class="text-gradient">A FEW TAPS AWAY</span>
               </h1>
               <p class="text-white/60 text-lg mb-12 leading-relaxed">
-                Ready to take the first step? Fill out the form and I'll get back to you within 24 hours 
-                to schedule your free consultation.
+                Fill in this quick form and you'll be directed to our packages. If you have further questions, reach us through our social media platforms.
               </p>
 
               <!-- Contact Details -->
@@ -86,7 +85,7 @@ import { contactPageData } from '../../data/contact-page.data';
                   </div>
                   <h3 class="font-display text-3xl mb-4">MESSAGE SENT!</h3>
                   <p class="text-white/60 mb-8">
-                    Thank you for reaching out. I'll get back to you within 24 hours.
+                    Thank you for reaching out! The HIT Egypt team will be in touch with your package options soon.
                   </p>
                   <button 
                     class="btn-secondary"
@@ -163,7 +162,7 @@ import { contactPageData } from '../../data/contact-page.data';
 
                     <!-- Goal -->
                     <div>
-                      <label class="block text-white/60 text-sm mb-2">What is your primary goal? *</label>
+                      <label class="block text-white/60 text-sm mb-2">Choose your desired location *</label>
                       <select
                         formControlName="goal"
                         class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white
@@ -171,7 +170,7 @@ import { contactPageData } from '../../data/contact-page.data';
                                transition-all duration-300 appearance-none cursor-pointer"
                         style="background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 4 5&quot;><path fill=&quot;%23ffffff&quot; d=&quot;M2 0L0 2h4zm0 5L0 3h4z&quot;/></svg>'); background-repeat: no-repeat; background-position: right 1rem center; background-size: 0.75rem;"
                       >
-                        <option value="" disabled selected class="text-white/40">Select your goal</option>
+                        <option value="" disabled selected class="text-white/40">Select your location</option>
                         @for (goal of goals; track goal) {
                           <option [value]="goal" class="bg-dark text-white">{{ goal }}</option>
                         }
@@ -231,8 +230,8 @@ import { contactPageData } from '../../data/contact-page.data';
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h3 class="font-display text-2xl mb-2">VISIT OUR GYM</h3>
-            <p class="text-white/60">123 Fitness Street, Los Angeles, CA 90001</p>
+            <h3 class="font-display text-2xl mb-2">OUR LOCATIONS</h3>
+            <p class="text-white/60">8 venues across Cairo, Egypt — and expanding</p>
           </div>
         </div>
         <!-- Placeholder for actual map integration -->
