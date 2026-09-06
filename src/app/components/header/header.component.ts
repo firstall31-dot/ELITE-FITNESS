@@ -31,7 +31,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             <a routerLink="/contact" class="btn-primary">Book a Spot</a>
           </div>
           
-           <button class="lg:hidden w-10 h-10 border border-white/20 bg-white/5 flex items-center justify-center cursor-pointer hover:border-primary-500 transition-colors" (click)="toggleMobileMenu()">
+           <button class="lg:hidden w-10 h-10 rounded-xl border border-white/20 bg-white/5 flex items-center justify-center cursor-pointer hover:border-primary-500 transition-colors" (click)="toggleMobileMenu()">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>

@@ -29,7 +29,7 @@ import { testimonialsData } from '../../data/testimonials.data';
                 <article class="reference-panel p-7 sm:p-10 md:p-12 min-h-[310px] animate-fade-in">
                   <div class="flex items-start justify-between gap-6 mb-8">
                     <div class="flex items-center gap-4">
-                      <img [src]="testimonial.image" [alt]="testimonial.name" class="w-14 h-14 object-cover grayscale border border-primary-500/50">
+                      <img [src]="testimonial.image" [alt]="testimonial.name" class="w-14 h-14 object-cover grayscale rounded-full border border-primary-500/50">
                       <div>
                         <h3 class="font-display text-xl text-white">{{ testimonial.name }}</h3>
                         <p class="text-primary-300/70 text-sm">{{ testimonial.role }}</p>

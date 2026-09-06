@@ -14,11 +14,11 @@ import { aboutData } from '../../data/about.data';
           <!-- Image Section -->
           <div class="relative animate-on-scroll-left">
             <!-- Main Image -->
-            <div class="relative overflow-hidden border border-white/15">
+            <div class="relative overflow-hidden border border-white/15 rounded-3xl">
               <img 
                 [src]="aboutData.image"
                 [alt]="aboutData.imageAlt"
-                class="w-full h-[500px] lg:h-[600px] object-cover"
+                class="w-full h-[500px] lg:h-[600px] object-cover rounded-3xl"
               >
               <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
             </div>

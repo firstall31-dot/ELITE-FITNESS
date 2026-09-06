@@ -37,11 +37,11 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
                    [class.lg:flex-row-reverse]="!even">
                 <!-- Image -->
                 <div class="relative" [class.lg:order-2]="!even">
-                   <div class="overflow-hidden border border-white/15">
+                   <div class="overflow-hidden border border-white/15 rounded-3xl">
                     <img 
                       [src]="program.image"
                       [alt]="program.title"
-                      class="w-full h-[400px] lg:h-[500px] object-cover"
+                       class="w-full h-[400px] lg:h-[500px] object-cover rounded-3xl"
                     >
                   </div>
                   <!-- Price Badge -->

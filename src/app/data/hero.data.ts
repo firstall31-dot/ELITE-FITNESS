@@ -15,10 +15,10 @@ export const heroData = {
     rating: '40+',
     ratingLabel: 'Pro Coaches',
   },
-  backgroundImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+  backgroundImage: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=2070&q=85',
   avatars: [
-    'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=100&h=100&fit=crop',
-    'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+    'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=100&h=100&q=85',
+    'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=100&h=100&q=85',
+    'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=100&h=100&q=85',
   ],
 };

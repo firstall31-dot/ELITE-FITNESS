@@ -46,11 +46,11 @@ import { aboutPageData } from '../../data/about-page.data';
 
             <!-- Image -->
             <div class="relative">
-               <div class="overflow-hidden border border-white/15">
+               <div class="overflow-hidden border border-white/15 rounded-3xl">
                 <img 
                   [src]="pageData.hero.image"
                   [alt]="pageData.hero.imageAlt"
-                  class="w-full h-[500px] lg:h-[600px] object-cover"
+                  class="w-full h-[500px] lg:h-[600px] object-cover rounded-3xl"
                 >
               </div>
               <div class="absolute -bottom-4 -left-4 w-32 h-32 border-2 border-primary-600/50 rounded-3xl"></div>
