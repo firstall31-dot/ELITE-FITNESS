@@ -91,7 +91,7 @@ import { aboutPageData } from '../../data/about-page.data';
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @for (pillar of pillars; track pillar.title) {
                <div class="reference-panel p-8 text-center hover:border-primary-500/60 transition-all duration-300">
-                 <div class="w-16 h-16 border border-primary-500/50 bg-primary-500/10 flex items-center justify-center mx-auto mb-6">
+                 <div class="w-16 h-16 rounded-xl border border-primary-500/50 bg-primary-500/10 flex items-center justify-center mx-auto mb-6">
                    <span class="font-black text-xl text-primary-500">{{ pillar.number }}</span>
                 </div>
                 <h3 class="font-display text-2xl mb-4">{{ pillar.title }}</h3>
@@ -115,7 +115,7 @@ import { aboutPageData } from '../../data/about-page.data';
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             @for (cert of certifications; track cert.name) {
                <div class="reference-panel p-6 text-center hover:border-primary-500/60 transition-all duration-300">
-                 <div class="w-16 h-16 border border-primary-500/40 bg-primary-500/10 flex items-center justify-center mx-auto mb-4">
+                  <div class="w-16 h-16 rounded-xl border border-primary-500/40 bg-primary-500/10 flex items-center justify-center mx-auto mb-4">
                   <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                   </svg>

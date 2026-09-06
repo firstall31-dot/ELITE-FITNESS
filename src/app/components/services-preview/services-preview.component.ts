@@ -37,7 +37,7 @@ import { servicesData } from '../../data/services.data';
               [class]="'stagger-' + (i + 1)"
             >
               <!-- Icon -->
-              <div class="w-14 h-14 border border-primary-500/40 bg-primary-500/10 flex items-center justify-center mb-6
+              <div class="w-14 h-14 rounded-xl border border-primary-500/40 bg-primary-500/10 flex items-center justify-center mb-6
                           group-hover:bg-primary-600 group-hover:scale-110 transition-all duration-300">
                 <svg class="w-8 h-8 text-primary-500 group-hover:text-white transition-colors" 
                      fill="none" stroke="currentColor" viewBox="0 0 24 24">

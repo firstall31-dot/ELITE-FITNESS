@@ -31,7 +31,7 @@ import { aboutData } from '../../data/about.data';
             </div>
             
             <!-- Red accent -->
-            <div class="absolute -top-4 -left-4 w-24 h-24 border border-primary-500/70"></div>
+            <div class="absolute -top-4 -left-4 w-24 h-24 rounded-3xl border border-primary-500/70"></div>
           </div>
 
           <!-- Content Section -->

@@ -57,13 +57,13 @@ import { testimonialsData } from '../../data/testimonials.data';
                     (click)="setActiveIndex(i)"
                     [attr.aria-label]="'Show testimonial from ' + testimonial.name"
                     [class]="activeIndex() === i ? 'w-10 bg-primary-500' : 'w-3 bg-white/20 hover:bg-white/40'"
-                    class="h-1 transition-all duration-300"
+                     class="h-1 rounded-full transition-all duration-300"
                   ></button>
                 }
               </div>
               <div class="flex gap-2">
-                <button type="button" (click)="prev()" aria-label="Previous testimonial" class="w-10 h-10 border border-white/20 text-white/60 hover:border-primary-500 hover:text-primary-400 transition-colors">←</button>
-                <button type="button" (click)="next()" aria-label="Next testimonial" class="w-10 h-10 border border-white/20 text-white/60 hover:border-primary-500 hover:text-primary-400 transition-colors">→</button>
+                <button type="button" (click)="prev()" aria-label="Previous testimonial" class="w-10 h-10 rounded-xl border border-white/20 text-white/60 hover:border-primary-500 hover:text-primary-400 transition-colors">←</button>
+                <button type="button" (click)="next()" aria-label="Next testimonial" class="w-10 h-10 rounded-xl border border-white/20 text-white/60 hover:border-primary-500 hover:text-primary-400 transition-colors">→</button>
               </div>
             </div>
           </div>

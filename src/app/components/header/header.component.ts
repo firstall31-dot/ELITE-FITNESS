@@ -11,7 +11,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <nav class="container-max mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-[76px]">
           <a routerLink="/" class="flex items-center gap-3 group">
-            <div class="w-10 h-10 bg-primary-500 flex items-center justify-center transition-transform duration-300 group-hover:rotate-3">
+            <div class="w-10 h-10 rounded-xl bg-primary-500 flex items-center justify-center transition-transform duration-300 group-hover:rotate-3">
               <span class="font-black text-sm tracking-[-0.08em] text-white">HIT</span>
             </div>
             <span class="font-black text-sm tracking-[0.18em] hidden sm:block text-white uppercase">HIT Egypt</span>
