@@ -10,7 +10,7 @@ import { aboutPageData } from '../../data/about-page.data';
   template: `
     <div>
       <!-- Hero Section -->
-      <section class="section-padding bg-black relative overflow-hidden">
+       <section class="section-padding bg-black relative overflow-hidden border-b border-white/10">
         <div class="absolute inset-0">
           <div class="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
           <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl"></div>
@@ -20,7 +20,7 @@ import { aboutPageData } from '../../data/about-page.data';
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <!-- Content -->
             <div>
-              <span class="inline-block text-primary-500 text-sm font-semibold tracking-wider uppercase mb-4">
+               <span class="reference-kicker mb-4">
                 {{ pageData.hero.badge }}
               </span>
               <h1 class="font-display text-5xl sm:text-6xl md:text-7xl mb-6">
@@ -46,7 +46,7 @@ import { aboutPageData } from '../../data/about-page.data';
 
             <!-- Image -->
             <div class="relative">
-              <div class="rounded-3xl overflow-hidden">
+               <div class="overflow-hidden border border-white/15">
                 <img 
                   [src]="pageData.hero.image"
                   [alt]="pageData.hero.imageAlt"
@@ -61,10 +61,11 @@ import { aboutPageData } from '../../data/about-page.data';
       </section>
 
       <!-- Story Section -->
-      <section class="section-padding bg-black">
+       <section class="section-padding bg-[#120807] border-y border-primary-500/20">
         <div class="container-max mx-auto">
           <div class="max-w-4xl mx-auto">
-            <h2 class="font-display text-4xl sm:text-5xl text-center mb-12">
+             <div class="text-center mb-4"><span class="reference-kicker">The HIT story</span></div>
+             <h2 class="font-display text-4xl sm:text-5xl text-center mb-12">
               {{ pageData.story.title.line1 }} <span class="text-gradient">{{ pageData.story.title.line2 }}</span>
             </h2>
 
@@ -78,9 +79,10 @@ import { aboutPageData } from '../../data/about-page.data';
       </section>
 
       <!-- Philosophy Section -->
-      <section class="section-padding bg-black">
+       <section class="section-padding bg-black">
         <div class="container-max mx-auto">
-          <div class="text-center mb-16">
+           <div class="text-center mb-16">
+             <span class="reference-kicker mb-4">The HIT standard</span>
             <h2 class="font-display text-4xl sm:text-5xl mb-6">
               {{ pageData.philosophy.title.line1 }} <span class="text-gradient">{{ pageData.philosophy.title.line2 }}</span>
             </h2>
@@ -88,9 +90,9 @@ import { aboutPageData } from '../../data/about-page.data';
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             @for (pillar of pillars; track pillar.title) {
-              <div class="glass-card p-8 text-center hover:border-primary-600/50 transition-all duration-300">
-                <div class="w-16 h-16 rounded-full bg-primary-600/20 flex items-center justify-center mx-auto mb-6">
-                  <span class="font-display text-3xl text-primary-500">{{ pillar.number }}</span>
+               <div class="reference-panel p-8 text-center hover:border-primary-500/60 transition-all duration-300">
+                 <div class="w-16 h-16 border border-primary-500/50 bg-primary-500/10 flex items-center justify-center mx-auto mb-6">
+                   <span class="font-black text-xl text-primary-500">{{ pillar.number }}</span>
                 </div>
                 <h3 class="font-display text-2xl mb-4">{{ pillar.title }}</h3>
                 <p class="text-white/60 leading-relaxed">{{ pillar.description }}</p>
@@ -101,9 +103,10 @@ import { aboutPageData } from '../../data/about-page.data';
       </section>
 
       <!-- Certifications Section -->
-      <section class="section-padding bg-black">
+       <section class="section-padding bg-[#120807] border-y border-primary-500/20">
         <div class="container-max mx-auto">
-          <div class="text-center mb-16">
+           <div class="text-center mb-16">
+             <span class="reference-kicker mb-4">Find your venue</span>
             <h2 class="font-display text-4xl sm:text-5xl mb-6">
               {{ pageData.certifications.title.line1 }} <span class="text-gradient">{{ pageData.certifications.title.line2 }}</span>
             </h2>
@@ -111,8 +114,8 @@ import { aboutPageData } from '../../data/about-page.data';
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
             @for (cert of certifications; track cert.name) {
-              <div class="glass-card p-6 text-center hover:border-primary-600/50 transition-all duration-300">
-                <div class="w-16 h-16 rounded-full bg-primary-600/20 flex items-center justify-center mx-auto mb-4">
+               <div class="reference-panel p-6 text-center hover:border-primary-500/60 transition-all duration-300">
+                 <div class="w-16 h-16 border border-primary-500/40 bg-primary-500/10 flex items-center justify-center mx-auto mb-4">
                   <svg class="w-8 h-8 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                   </svg>
@@ -126,7 +129,7 @@ import { aboutPageData } from '../../data/about-page.data';
       </section>
 
       <!-- CTA Section -->
-      <section class="section-padding bg-black relative overflow-hidden">
+       <section class="section-padding bg-black relative overflow-hidden border-t border-primary-500/30">
         <div class="absolute inset-0 bg-gradient-to-r from-primary-600/10 via-transparent to-primary-600/10"></div>
         <div class="container-max mx-auto relative z-10 text-center">
           <h2 class="font-display text-4xl sm:text-5xl mb-6">

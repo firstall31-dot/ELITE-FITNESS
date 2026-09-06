@@ -9,20 +9,20 @@
 
 // Custom CSS Variables
 :root {
-  --tui-primary: #DC2626;
-  --tui-primary-hover: #B91C1C;
-  --tui-primary-active: #991B1B;
+  --tui-primary: #F0442D;
+  --tui-primary-hover: #FF6A50;
+  --tui-primary-active: #B52C1D;
   --tui-secondary: #0A0A0A;
   --tui-base-01: #0A0A0A;
-  --tui-base-02: #111111;
-  --tui-base-03: #171717;
-  --tui-base-04: #262626;
+  --tui-base-02: #120807;
+  --tui-base-03: #1C0B09;
+  --tui-base-04: #29110E;
   --tui-base-05: #404040;
   --tui-text-01: #FFFFFF;
   --tui-text-02: #A3A3A3;
   --tui-text-03: #737373;
-  --tui-link: #DC2626;
-  --tui-link-hover: #EF4444;
+  --tui-link: #F0442D;
+  --tui-link-hover: #FF6A50;
   --tui-positive: #22C55E;
   --tui-negative: #DC2626;
   --tui-warning: #F59E0B;
@@ -47,6 +47,10 @@ body {
   color: #FFFFFF;
   line-height: 1.6;
   overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 72px 72px;
 }
 
 // Custom scrollbar
@@ -76,32 +80,32 @@ body {
 // Utility classes
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 text-white px-8 py-4 rounded-full font-semibold 
-           transition-all duration-300 hover:bg-primary-500 hover:scale-105
-           hover:shadow-[0_0_30px_rgba(220,38,38,0.5)] active:scale-95;
+    @apply bg-primary-500 text-white px-7 py-3.5 rounded-none font-semibold uppercase tracking-[0.12em] text-xs
+           transition-all duration-300 hover:bg-primary-400 hover:-translate-y-0.5
+           hover:shadow-[0_12px_30px_rgba(240,68,45,0.28)] active:translate-y-0;
   }
 
   .btn-secondary {
-    @apply border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold 
-           transition-all duration-300 hover:border-primary-600 hover:text-primary-500
-           hover:bg-white/5;
+    @apply border border-white/30 text-white px-7 py-3.5 rounded-none font-semibold uppercase tracking-[0.12em] text-xs
+           transition-all duration-300 hover:border-primary-500 hover:text-primary-400
+           hover:bg-primary-500/5;
   }
 
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-500 via-primary-400 to-primary-600 
+    @apply bg-gradient-to-r from-primary-400 via-primary-500 to-primary-700
            bg-clip-text text-transparent;
   }
 
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-32;
+    @apply px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-36;
   }
 
   .container-max {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-[1320px] mx-auto;
   }
 
   .glass-card {
-    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+    @apply bg-[#160a09]/90 backdrop-blur-lg border border-white/10 rounded-none;
   }
 
   .glow-effect {
@@ -115,6 +119,75 @@ body {
       @apply opacity-60;
     }
   }
+}
+
+/* Reference design language: editorial, athletic, and deliberately sharp. */
+section {
+  position: relative;
+}
+
+section h1,
+section h2,
+section h3,
+footer h3 {
+  letter-spacing: -0.045em;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+section p,
+footer p,
+section li,
+footer li {
+  font-family: 'Barlow', 'Inter', sans-serif;
+}
+
+.reference-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #F0442D;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+}
+
+.reference-kicker::before {
+  content: '';
+  width: 2.2rem;
+  height: 1px;
+  background: #F0442D;
+}
+
+.reference-rule {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(240,68,45,.7), rgba(255,255,255,.12), transparent);
+}
+
+.reference-panel {
+  background: linear-gradient(135deg, rgba(49, 12, 9, .92), rgba(15, 8, 7, .95));
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.reference-number {
+  color: rgba(240,68,45,.7);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .22em;
+}
+
+.prose-dark h2,
+.prose-dark p,
+.prose-dark ul,
+.prose-dark .glass-card {
+  position: relative;
+}
+
+@media (max-width: 640px) {
+  body { background-size: 48px 48px; }
+  section h1 { letter-spacing: -0.035em; }
 }
 
 // Animation observer classes

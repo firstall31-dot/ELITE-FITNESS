@@ -14,7 +14,7 @@ import { contactPageData } from '../../data/contact-page.data';
   template: `
     <div>
       <!-- Hero Section -->
-      <section class="section-padding bg-dark relative overflow-hidden">
+       <section class="section-padding bg-[#120807] relative overflow-hidden border-b border-primary-500/25">
         <div class="absolute inset-0">
           <div class="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
           <div class="absolute bottom-0 left-0 w-72 h-72 bg-primary-600/5 rounded-full blur-3xl"></div>
@@ -24,7 +24,7 @@ import { contactPageData } from '../../data/contact-page.data';
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <!-- Contact Info -->
             <div>
-              <span class="inline-block text-primary-500 text-sm font-semibold tracking-wider uppercase mb-4">
+               <span class="reference-kicker mb-4">
                 Contact Us
               </span>
               <h1 class="font-display text-5xl sm:text-6xl md:text-7xl mb-6">
@@ -75,7 +75,7 @@ import { contactPageData } from '../../data/contact-page.data';
             </div>
 
             <!-- Contact Form -->
-            <div class="glass-card p-8 md:p-12">
+             <div class="reference-panel p-8 md:p-12">
               @if (formSubmitted()) {
                 <div class="text-center py-12">
                   <div class="w-20 h-20 rounded-full bg-primary-600/20 flex items-center justify-center mx-auto mb-6">
@@ -263,7 +263,7 @@ import { contactPageData } from '../../data/contact-page.data';
       </section>
 
       <!-- Map Section -->
-      <section class="h-[400px] bg-dark-100 relative">
+       <section class="h-[400px] bg-[#0f0908] relative border-t border-primary-500/20">
         <div class="absolute inset-0 flex items-center justify-center">
           <div class="text-center">
             <div class="w-16 h-16 rounded-full bg-primary-600/20 flex items-center justify-center mx-auto mb-4">

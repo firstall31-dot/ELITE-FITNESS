@@ -8,18 +8,18 @@ import { footerData } from '../../data/footer.data';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <footer class="bg-black border-t border-white/10">
+    <footer class="bg-[#120807] border-t border-primary-500/30">
       <div class="container-max mx-auto section-padding">
         <!-- Main Footer -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <!-- Brand -->
           <div class="lg:col-span-1">
             <a routerLink="/" class="flex items-center gap-3 mb-6 group">
-              <div class="w-12 h-12 rounded-full bg-primary-600 flex items-center justify-center
+              <div class="w-10 h-10 bg-primary-500 flex items-center justify-center
                           transition-all duration-300 group-hover:shadow-[0_0_20px_rgba(220,38,38,0.5)]">
-                <span class="font-display text-2xl text-white">E</span>
+                <span class="font-black text-sm tracking-[-0.08em] text-white">HIT</span>
               </div>
-              <span class="font-display text-xl tracking-wider">ELITE FITNESS</span>
+              <span class="font-black text-sm tracking-[0.18em] uppercase">HIT Egypt</span>
             </a>
             <p class="text-white/60 mb-6 leading-relaxed">
               Transform your body and mind with personalized coaching designed for real results.
@@ -45,7 +45,7 @@ import { footerData } from '../../data/footer.data';
 
           <!-- Quick Links -->
           <div>
-            <h3 class="font-semibold text-lg mb-6">Quick Links</h3>
+            <h3 class="font-semibold text-sm tracking-[0.18em] mb-6">Quick Links</h3>
             <ul class="space-y-4">
               @for (link of quickLinks; track link.path) {
                 <li>
@@ -62,7 +62,7 @@ import { footerData } from '../../data/footer.data';
 
           <!-- Services -->
           <div>
-            <h3 class="font-semibold text-lg mb-6">Services</h3>
+            <h3 class="font-semibold text-sm tracking-[0.18em] mb-6">Services</h3>
             <ul class="space-y-4">
               @for (service of services; track service) {
                 <li>
@@ -79,7 +79,7 @@ import { footerData } from '../../data/footer.data';
 
           <!-- Contact -->
           <div>
-            <h3 class="font-semibold text-lg mb-6">Contact</h3>
+            <h3 class="font-semibold text-sm tracking-[0.18em] mb-6">Contact</h3>
             <ul class="space-y-4 text-white/60">
               <li class="flex items-start gap-3">
                 <svg class="w-5 h-5 mt-1 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

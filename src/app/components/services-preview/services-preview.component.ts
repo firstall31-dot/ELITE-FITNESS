@@ -16,7 +16,7 @@ import { servicesData } from '../../data/services.data';
       <div class="container-max mx-auto relative z-10">
         <!-- Section Header -->
         <div class="text-center mb-16 animate-on-scroll">
-          <span class="inline-block text-primary-500 text-sm font-semibold tracking-wider uppercase mb-4">
+          <span class="reference-kicker mb-4">
             Our Services
           </span>
           <h2 class="font-display text-4xl sm:text-5xl md:text-6xl mb-6 text-balance">
@@ -32,12 +32,12 @@ import { servicesData } from '../../data/services.data';
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           @for (service of services; track service.title; let i = $index) {
             <div 
-              class="group glass-card p-8 transition-all duration-500 hover:bg-white/10 
-                     hover:border-primary-600/50 hover:-translate-y-2 animate-on-scroll"
+              class="group reference-panel p-8 transition-all duration-500 hover:bg-[#2a100d]
+                     hover:border-primary-500/60 hover:-translate-y-2 animate-on-scroll relative overflow-hidden"
               [class]="'stagger-' + (i + 1)"
             >
               <!-- Icon -->
-              <div class="w-16 h-16 rounded-2xl bg-primary-600/20 flex items-center justify-center mb-6
+              <div class="w-14 h-14 border border-primary-500/40 bg-primary-500/10 flex items-center justify-center mb-6
                           group-hover:bg-primary-600 group-hover:scale-110 transition-all duration-300">
                 <svg class="w-8 h-8 text-primary-500 group-hover:text-white transition-colors" 
                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,8 @@ import { servicesData } from '../../data/services.data';
               </div>
               
               <!-- Content -->
-              <h3 class="font-display text-2xl mb-4 group-hover:text-primary-500 transition-colors">
+               <div class="reference-number mb-3">0{{ i + 1 }}</div>
+               <h3 class="font-display text-2xl mb-4 group-hover:text-primary-500 transition-colors">
                 {{ service.title }}
               </h3>
               <p class="text-white/60 mb-6 leading-relaxed">

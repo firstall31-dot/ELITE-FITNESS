@@ -10,13 +10,13 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
   template: `
     <div>
       <!-- Hero Section -->
-      <section class="section-padding bg-black relative overflow-hidden">
+       <section class="section-padding bg-[#120807] relative overflow-hidden border-b border-primary-500/25">
         <div class="absolute inset-0">
           <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary-600/10 rounded-full blur-3xl"></div>
         </div>
 
         <div class="container-max mx-auto relative z-10 text-center">
-          <span class="inline-block text-primary-500 text-sm font-semibold tracking-wider uppercase mb-4">
+           <span class="reference-kicker mb-4">
             {{ pageData.hero.badge }}
           </span>
           <h1 class="font-display text-5xl sm:text-6xl md:text-7xl mb-6">
@@ -29,7 +29,7 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
       </section>
 
       <!-- Programs Section -->
-      <section class="section-padding bg-black">
+       <section class="section-padding bg-black">
         <div class="container-max mx-auto">
           <div class="space-y-20">
             @for (program of programs; track program.title; let i = $index; let even = $even) {
@@ -37,7 +37,7 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
                    [class.lg:flex-row-reverse]="!even">
                 <!-- Image -->
                 <div class="relative" [class.lg:order-2]="!even">
-                  <div class="rounded-3xl overflow-hidden">
+                   <div class="overflow-hidden border border-white/15">
                     <img 
                       [src]="program.image"
                       [alt]="program.title"
@@ -45,7 +45,7 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
                     >
                   </div>
                   <!-- Price Badge -->
-                  <div class="absolute -bottom-4 -right-4 glass-card px-6 py-4">
+                   <div class="absolute -bottom-4 -right-4 reference-panel px-6 py-4">
                     <div class="text-white/50 text-sm">Starting at</div>
                     <div class="font-display text-3xl text-primary-500">{{ program.price }}</div>
                     <div class="text-white/50 text-sm">{{ program.priceUnit }}</div>
@@ -68,7 +68,7 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                     @for (feature of program.features; track feature) {
                       <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-primary-600/20 flex items-center justify-center flex-shrink-0">
+                         <div class="w-8 h-8 border border-primary-500/40 bg-primary-500/10 flex items-center justify-center flex-shrink-0">
                           <svg class="w-4 h-4 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
                           </svg>
@@ -92,18 +92,19 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
       </section>
 
       <!-- Comparison Table -->
-      <section class="section-padding bg-black">
+       <section class="section-padding bg-[#120807] border-y border-primary-500/20">
         <div class="container-max mx-auto">
-          <div class="text-center mb-16">
+           <div class="text-center mb-16">
+             <span class="reference-kicker mb-4">Choose your lane</span>
             <h2 class="font-display text-4xl sm:text-5xl mb-6">
               {{ pageData.comparison.title.line1 }} <span class="text-gradient">{{ pageData.comparison.title.line2 }}</span>
             </h2>
           </div>
 
-          <div class="overflow-x-auto">
-            <table class="w-full min-w-[800px]">
-              <thead>
-                <tr class="border-b border-white/10">
+           <div class="overflow-x-auto reference-panel p-2">
+             <table class="w-full min-w-[800px]">
+               <thead class="bg-primary-500/10">
+                 <tr class="border-b border-primary-500/30">
                   <th class="text-left py-6 px-4 text-white/50 font-normal">Features</th>
                   @for (plan of comparisonPlans; track plan.name) {
                     <th class="text-center py-6 px-4">
@@ -147,9 +148,10 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
       </section>
 
       <!-- FAQ Section -->
-      <section class="section-padding bg-black">
+       <section class="section-padding bg-black">
         <div class="container-max mx-auto">
-          <div class="text-center mb-16">
+           <div class="text-center mb-16">
+             <span class="reference-kicker mb-4">Need a hand?</span>
             <h2 class="font-display text-4xl sm:text-5xl mb-6">
               FREQUENTLY ASKED <span class="text-gradient">QUESTIONS</span>
             </h2>
@@ -157,7 +159,7 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
 
           <div class="max-w-3xl mx-auto space-y-4">
             @for (faq of faqs; track faq.question; let i = $index) {
-              <div class="glass-card overflow-hidden">
+               <div class="reference-panel overflow-hidden">
                 <button 
                   class="w-full px-6 py-5 text-left flex items-center justify-between gap-4
                          hover:bg-white/5 transition-colors"
@@ -187,7 +189,7 @@ import { servicesPageData, ComparisonFeature, ComparisonPlan, PlanName } from '.
       </section>
 
       <!-- CTA Section -->
-      <section class="section-padding bg-black relative overflow-hidden">
+       <section class="section-padding bg-black relative overflow-hidden border-t border-primary-500/30">
         <div class="absolute inset-0 bg-gradient-to-r from-primary-600/10 via-transparent to-primary-600/10"></div>
         <div class="container-max mx-auto relative z-10 text-center">
           <h2 class="font-display text-4xl sm:text-5xl mb-6">

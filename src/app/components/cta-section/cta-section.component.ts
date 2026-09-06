@@ -8,20 +8,20 @@ import { ctaData } from '../../data/cta.data';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <section class="relative py-24 md:py-32 overflow-hidden">
+    <section class="relative py-28 md:py-40 overflow-hidden border-y border-primary-500/30">
       <!-- Background -->
       <div class="absolute inset-0">
         <div 
           class="absolute inset-0 bg-cover bg-center bg-no-repeat"
           [style.background-image]="'url(' + ctaData.backgroundImage + ')'"
         ></div>
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/80"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/30 via-transparent to-transparent"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-[#220807] via-black/90 to-black/75"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-primary-900/40 via-transparent to-transparent"></div>
       </div>
 
       <div class="container-max mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="max-w-3xl animate-on-scroll">
-          <span class="inline-block text-primary-500 text-sm font-semibold tracking-wider uppercase mb-4">
+           <span class="reference-kicker mb-4">
             {{ ctaData.badge }}
           </span>
           <h2 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 text-balance">

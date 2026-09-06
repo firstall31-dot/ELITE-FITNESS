@@ -14,7 +14,7 @@ import { aboutData } from '../../data/about.data';
           <!-- Image Section -->
           <div class="relative animate-on-scroll-left">
             <!-- Main Image -->
-            <div class="relative rounded-3xl overflow-hidden">
+            <div class="relative overflow-hidden border border-white/15">
               <img 
                 [src]="aboutData.image"
                 [alt]="aboutData.imageAlt"
@@ -24,14 +24,14 @@ import { aboutData } from '../../data/about.data';
             </div>
             
             <!-- Floating Stats Card -->
-            <div class="absolute -bottom-6 -right-6 lg:right-auto lg:-left-6 glass-card p-6 
+            <div class="absolute -bottom-6 -right-6 lg:right-auto lg:-left-6 reference-panel p-6 
                         animate-float max-w-[200px]">
               <div class="font-display text-4xl text-primary-500 mb-1">{{ aboutData.stats.value }}</div>
               <div class="text-white/60 text-sm">{{ aboutData.stats.label }}</div>
             </div>
             
             <!-- Red accent -->
-            <div class="absolute -top-4 -left-4 w-24 h-24 border-2 border-primary-600/50 rounded-3xl"></div>
+            <div class="absolute -top-4 -left-4 w-24 h-24 border border-primary-500/70"></div>
           </div>
 
           <!-- Content Section -->
