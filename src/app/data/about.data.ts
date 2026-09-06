@@ -6,7 +6,7 @@ export const aboutData = {
   },
   description1: 'HIT Egypt is a well-established fitness entity since 2014. We serve a wide variety of athletic programs for different levels, different ages, and different goals — all from our home base at Heliopolis Sporting Club, Cairo.',
   description2: 'We believe that a healthy lifestyle is not, and should not be a phase. Instead, it is a journey that everyone should go through — and have it facilitated for them to embrace.',
-  image: 'https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=1000&q=85',
+  image: '/assets/images/hit-community.jpg',
   imageAlt: 'HIT Egypt Group Training',
   stats: {
     value: '2014',

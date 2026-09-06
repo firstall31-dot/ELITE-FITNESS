@@ -7,7 +7,7 @@ export const aboutPageData = {
     },
     description1: 'HIT Egypt is a well-established fitness entity since 2014. We serve a wide variety of athletic programs for different levels, different ages, and different goals. HIT is piloted from Heliopolis Sporting Club, Cairo, Egypt, with plans to expand worldwide.',
     description2: 'Now we offer you ten highly equipped venues around Cairo and the North Coast. We believe that a healthy lifestyle is not, and should not be a phase — instead, a journey that everyone should go through and have it facilitated for them to embrace.',
-    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85',
+    image: '/assets/images/hit-strength.jpg',
     imageAlt: 'HIT Egypt Training',
     cta: {
       primary: { label: 'Book a Spot', path: '/contact' },

@@ -27,7 +27,7 @@ export const servicesPageData = {
       description: 'Our flagship group sessions are designed for every fitness level. Beginner-friendly sessions like Hyper45, Sweat45, and HIT60 get you moving, while Perform and Prymal push intermediate athletes further.',
       price: 'Book a Package',
       priceUnit: 'multiple options',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1000&q=85',
+      image: '/assets/images/hit-hero.jpg',
       features: [
         'Hyper45 & Hyper60',
         'Sweat45 & HIT60',
@@ -43,7 +43,7 @@ export const servicesPageData = {
       description: 'Beyond our core sessions, HIT offers specialty classes that target specific disciplines and demographics — from calming Yoga by the beach to explosive Calisthenics.',
       price: 'Book a Package',
       priceUnit: 'multiple options',
-      image: 'https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&fit=crop&w=1000&q=85',
+      image: '/assets/images/hit-yoga.jpg',
       features: [
         'Calisthenics',
         'Yoga',
@@ -59,7 +59,7 @@ export const servicesPageData = {
       description: 'Structured multi-week programs built for real, lasting results. Whether you want to build, shred, or completely transform — we have a program designed exactly for you.',
       price: 'Book a Package',
       priceUnit: 'program-based',
-      image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1000&q=85',
+      image: '/assets/images/hit-strength.jpg',
       features: [
         '21-Day Transformation Program',
         'Fabfit Ladies Program',
@@ -75,7 +75,7 @@ export const servicesPageData = {
       description: 'Get undivided attention with our Personal Training sessions or train from anywhere with One-on-One Online Training — plus customized nutrition programs to accelerate your results.',
       price: 'Book a Package',
       priceUnit: 'per session/month',
-      image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1000&q=85',
+      image: '/assets/images/hit-coaching.jpg',
       features: [
         'One-on-one in-person training',
         'Online remote coaching',

@@ -15,5 +15,5 @@ export const ctaData = {
     '40+ certified coaches',
     'All levels welcome'
   ],
-  backgroundImage: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?auto=format&fit=crop&w=2070&q=85'
+  backgroundImage: '/assets/images/hit-cta.jpg'
 };
