@@ -8,7 +8,7 @@ import { ctaData } from '../../data/cta.data';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <section class="relative py-28 md:py-40 overflow-hidden border-y border-primary-500/30">
+    <section class="relative py-28 md:py-40 overflow-hidden border-y border-primary-500/30 image-surface">
       <!-- Background -->
       <div class="absolute inset-0">
         <div 

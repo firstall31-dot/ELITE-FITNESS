@@ -1,4 +1,4 @@
-import { Component, signal, HostListener } from '@angular/core';
+import { Component, signal, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -27,15 +27,50 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
             </a>
           </div>
           
-          <div class="hidden lg:block">
+          <div class="hidden lg:flex items-center gap-3">
+            <button
+              type="button"
+              class="theme-toggle"
+              [class.is-light]="isLightMode()"
+              (click)="toggleTheme()"
+              [attr.aria-pressed]="isLightMode()"
+              [attr.aria-label]="isLightMode() ? 'Switch to dark mode' : 'Switch to light mode'"
+              [attr.title]="isLightMode() ? 'Switch to dark mode' : 'Switch to light mode'"
+            >
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="3.5" stroke-width="1.8" />
+                <path stroke-linecap="round" stroke-width="1.8" d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" />
+              </svg>
+            </button>
             <a routerLink="/contact" class="btn-primary">Book a Spot</a>
           </div>
           
-           <button class="lg:hidden w-10 h-10 rounded-xl border border-white/20 bg-white/5 flex items-center justify-center cursor-pointer hover:border-primary-500 transition-colors" (click)="toggleMobileMenu()">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-          </button>
+           <div class="lg:hidden flex items-center gap-2">
+             <button
+               type="button"
+               class="theme-toggle"
+               [class.is-light]="isLightMode()"
+               (click)="toggleTheme()"
+               [attr.aria-pressed]="isLightMode()"
+               [attr.aria-label]="isLightMode() ? 'Switch to dark mode' : 'Switch to light mode'"
+             >
+               <svg class="theme-toggle__icon theme-toggle__icon--moon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+               </svg>
+               <svg class="theme-toggle__icon theme-toggle__icon--sun" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                 <circle cx="12" cy="12" r="3.5" stroke-width="1.8" />
+                 <path stroke-linecap="round" stroke-width="1.8" d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42" />
+               </svg>
+             </button>
+             <button class="w-10 h-10 rounded-xl border border-white/20 bg-white/5 flex items-center justify-center cursor-pointer hover:border-primary-500 transition-colors" (click)="toggleMobileMenu()">
+               <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+               </svg>
+             </button>
+           </div>
         </div>
       </nav>
       
@@ -64,9 +99,10 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
     }
   `]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   isScrolled = signal(false);
   isMobileMenuOpen = signal(false);
+  isLightMode = signal(false);
 
   navLinks = [
     { path: '/', label: 'Home', exact: true },
@@ -74,6 +110,30 @@ export class HeaderComponent {
     { path: '/services', label: 'Services', exact: false },
     { path: '/contact', label: 'Contact', exact: false },
   ];
+
+  ngOnInit() {
+    try {
+      this.setTheme(localStorage.getItem('hit-theme') === 'light');
+    } catch {
+      this.setTheme(false, false);
+    }
+  }
+
+  toggleTheme() {
+    this.setTheme(!this.isLightMode());
+  }
+
+  private setTheme(isLight: boolean, persist = true) {
+    this.isLightMode.set(isLight);
+    document.documentElement.classList.toggle('theme-light', isLight);
+    if (persist) {
+      try {
+        localStorage.setItem('hit-theme', isLight ? 'light' : 'dark');
+      } catch {
+        // Theme still applies for the current session when storage is unavailable.
+      }
+    }
+  }
 
   @HostListener('window:scroll')
   onScroll() {

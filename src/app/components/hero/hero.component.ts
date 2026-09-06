@@ -8,7 +8,7 @@ import { heroData } from '../../data/hero.data';
   standalone: true,
   imports: [CommonModule, RouterLink],
   template: `
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-black image-surface">
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
         <div 
